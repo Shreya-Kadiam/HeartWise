@@ -1,0 +1,80 @@
+==============================================================================
+HEARTWISE - TRAINED ML MODELS & CLASSIFICATION REPORTS
+==============================================================================
+Generated At       : 2026-11-25T09:13:12.631249+00:00
+Dataset            : data/heart_disease_risk_4000_rows.csv (4000 rows)
+Split Strategy     : Stratified 70% Train (2800) / 15% Validation (600) / 15% Test (600)
+Class Distribution : No Heart Disease = 2788 | Heart Disease = 1212
+Selected Best Model: Logistic Regression
+
+------------------------------------------------------------------------------
+1. OVERALL MODEL COMPARISON SUMMARY (HELD-OUT TEST SET, n=600)
+------------------------------------------------------------------------------
+Model                    ROC-AUC  Accuracy  Precision    Recall  F1-Score  Specificity
+------------------------------------------------------------------------------
+Logistic Regression       96.07%    89.67%     79.41%    89.01%    83.94%       89.95%
+Random Forest             95.46%    89.50%     80.20%    86.81%    83.38%       90.67%
+KNN                       92.52%    84.83%     90.27%    56.04%    69.15%       97.37%
+
+------------------------------------------------------------------------------
+2. DETAILED CLASSIFICATION REPORTS (PER MODEL)
+------------------------------------------------------------------------------
+
+[1] MODEL: Logistic Regression  <-- SELECTED BEST MODEL
+    Configuration   : C=1.0, class_weight='balanced', max_iter=2000
+    ROC-AUC Score   : 0.9607 (96.07%)
+    Confusion Matrix: TN=376  FP=42  FN=20  TP=162
+
+                      precision    recall  f1-score   support
+
+No Heart Disease (0)     0.9495    0.8995    0.9238       418
+   Heart Disease (1)     0.7941    0.8901    0.8394       182
+
+            accuracy                         0.8967       600
+           macro avg     0.8718    0.8948    0.8816       600
+        weighted avg     0.9024    0.8967    0.8982       600
+------------------------------------------------------------------------------
+
+[2] MODEL: Random Forest
+    Configuration   : n_estimators=300, max_depth=12, min_samples_leaf=2, class_weight='balanced'
+    ROC-AUC Score   : 0.9546 (95.46%)
+    Confusion Matrix: TN=379  FP=39  FN=24  TP=158
+
+                      precision    recall  f1-score   support
+
+No Heart Disease (0)     0.9404    0.9067    0.9233       418
+   Heart Disease (1)     0.8020    0.8681    0.8338       182
+
+            accuracy                         0.8950       600
+           macro avg     0.8712    0.8874    0.8785       600
+        weighted avg     0.8985    0.8950    0.8961       600
+------------------------------------------------------------------------------
+
+[3] MODEL: KNN
+    Configuration   : n_neighbors=11, weights='distance', metric='minkowski'
+    ROC-AUC Score   : 0.9252 (92.52%)
+    Confusion Matrix: TN=407  FP=11  FN=80  TP=102
+
+                      precision    recall  f1-score   support
+
+No Heart Disease (0)     0.8357    0.9737    0.8994       418
+   Heart Disease (1)     0.9027    0.5604    0.6915       182
+
+            accuracy                         0.8483       600
+           macro avg     0.8692    0.7671    0.7955       600
+        weighted avg     0.8560    0.8483    0.8364       600
+------------------------------------------------------------------------------
+
+3. WHY LOGISTIC REGRESSION OUTPERFORMS RANDOM FOREST & KNN ON THIS DATASET
+------------------------------------------------------------------------------
+* Smooth Linear Clinical Risk Relationship:
+  In this 4,000-row clinical dataset, cardiovascular risk rises smoothly and additively with standardized biomarkers (max heart rate, age, ST depression, chest pain type, exercise-induced angina, smoking, HbA1c, HDL). Logistic Regression learns this smooth log-odds boundary directly, whereas Random Forest approximates diagonal boundaries using axis-aligned step splits.
+
+* Higher Sensitivity (Recall) & ROC-AUC on Test Data:
+  On the 600-patient held-out test set, Logistic Regression achieves 96.1% ROC-AUC, 89.7% accuracy, and 89.0% recall on Heart Disease cases — outperforming Random Forest (95.5% ROC-AUC, 86.8% recall) and KNN (92.5% ROC-AUC, 56.0% recall).
+
+* Why KNN Trails Behind:
+  After One-Hot Encoding categorical features, the feature space has 25+ dimensions. Distance-based KNN suffers from the curse of dimensionality, causing lower recall (56.0%) compared to parametric and ensemble methods.
+
+* Well-Calibrated Probabilities & Interpretability:
+  Logistic Regression produces naturally calibrated risk percentages (0%–100%) and clear positive/negative feature weights (coefficients), which is ideal for medical screening.

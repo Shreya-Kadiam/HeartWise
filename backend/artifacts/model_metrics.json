@@ -1,0 +1,702 @@
+{
+  "selected_model": "Logistic Regression",
+  "threshold": 0.5,
+  "trained_at": "2026-11-25T09:13:12.631249+00:00",
+  "comparison": [
+    {
+      "model": "Logistic Regression",
+      "threshold": 0.5,
+      "accuracy": 0.8967,
+      "recall": 0.8901,
+      "precision": 0.7941,
+      "f1_score": 0.8394,
+      "roc_auc": 0.9607,
+      "specificity": 0.8995
+    },
+    {
+      "model": "Random Forest",
+      "threshold": 0.5,
+      "accuracy": 0.895,
+      "recall": 0.8681,
+      "precision": 0.802,
+      "f1_score": 0.8338,
+      "roc_auc": 0.9546,
+      "specificity": 0.9067
+    },
+    {
+      "model": "KNN",
+      "threshold": 0.5,
+      "accuracy": 0.8483,
+      "recall": 0.5604,
+      "precision": 0.9027,
+      "f1_score": 0.6915,
+      "roc_auc": 0.9252,
+      "specificity": 0.9737
+    }
+  ],
+  "models": {
+    "Logistic Regression": {
+      "hyperparameters": "C=1.0, class_weight='balanced', max_iter=2000",
+      "threshold": 0.5,
+      "validation": {
+        "accuracy": 0.8617,
+        "recall": 0.8846,
+        "precision": 0.722,
+        "f1": 0.7951,
+        "roc_auc": 0.9476
+      },
+      "test": {
+        "accuracy": 0.8967,
+        "precision": 0.7941,
+        "recall": 0.8901,
+        "specificity": 0.8995,
+        "f1_score": 0.8394,
+        "roc_auc": 0.9607,
+        "true_negatives": 376,
+        "false_positives": 42,
+        "false_negatives": 20,
+        "true_positives": 162,
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0024,
+            "tpr": 0.2857
+          },
+          {
+            "fpr": 0.0048,
+            "tpr": 0.478
+          },
+          {
+            "fpr": 0.0096,
+            "tpr": 0.533
+          },
+          {
+            "fpr": 0.012,
+            "tpr": 0.5879
+          },
+          {
+            "fpr": 0.0167,
+            "tpr": 0.6264
+          },
+          {
+            "fpr": 0.0239,
+            "tpr": 0.6429
+          },
+          {
+            "fpr": 0.0263,
+            "tpr": 0.6703
+          },
+          {
+            "fpr": 0.0311,
+            "tpr": 0.7143
+          },
+          {
+            "fpr": 0.0359,
+            "tpr": 0.7637
+          },
+          {
+            "fpr": 0.0407,
+            "tpr": 0.7967
+          },
+          {
+            "fpr": 0.0478,
+            "tpr": 0.8022
+          },
+          {
+            "fpr": 0.055,
+            "tpr": 0.8132
+          },
+          {
+            "fpr": 0.0622,
+            "tpr": 0.8242
+          },
+          {
+            "fpr": 0.0646,
+            "tpr": 0.8407
+          },
+          {
+            "fpr": 0.0718,
+            "tpr": 0.8736
+          },
+          {
+            "fpr": 0.0861,
+            "tpr": 0.8791
+          },
+          {
+            "fpr": 0.0885,
+            "tpr": 0.8901
+          },
+          {
+            "fpr": 0.1124,
+            "tpr": 0.8956
+          },
+          {
+            "fpr": 0.1148,
+            "tpr": 0.9066
+          },
+          {
+            "fpr": 0.1364,
+            "tpr": 0.9176
+          },
+          {
+            "fpr": 0.1459,
+            "tpr": 0.9231
+          },
+          {
+            "fpr": 0.1531,
+            "tpr": 0.9396
+          },
+          {
+            "fpr": 0.2225,
+            "tpr": 0.9451
+          },
+          {
+            "fpr": 0.2416,
+            "tpr": 0.956
+          },
+          {
+            "fpr": 0.256,
+            "tpr": 0.967
+          },
+          {
+            "fpr": 0.3158,
+            "tpr": 0.9725
+          },
+          {
+            "fpr": 0.3325,
+            "tpr": 0.9835
+          },
+          {
+            "fpr": 0.4617,
+            "tpr": 0.989
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ],
+        "classification_report": {
+          "No Heart Disease (0)": {
+            "precision": 0.9494949494949495,
+            "recall": 0.8995215311004785,
+            "f1-score": 0.9238329238329238,
+            "support": 418.0
+          },
+          "Heart Disease (1)": {
+            "precision": 0.7941176470588235,
+            "recall": 0.8901098901098901,
+            "f1-score": 0.8393782383419689,
+            "support": 182.0
+          },
+          "accuracy": 0.8966666666666666,
+          "macro avg": {
+            "precision": 0.8718062982768865,
+            "recall": 0.8948157106051843,
+            "f1-score": 0.8816055810874464,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.902363834422658,
+            "recall": 0.8966666666666666,
+            "f1-score": 0.8982150025673341,
+            "support": 600.0
+          }
+        },
+        "classification_report_text": "                      precision    recall  f1-score   support\n\nNo Heart Disease (0)     0.9495    0.8995    0.9238       418\n   Heart Disease (1)     0.7941    0.8901    0.8394       182\n\n            accuracy                         0.8967       600\n           macro avg     0.8718    0.8948    0.8816       600\n        weighted avg     0.9024    0.8967    0.8982       600\n"
+      }
+    },
+    "Random Forest": {
+      "hyperparameters": "n_estimators=300, max_depth=12, min_samples_leaf=2, class_weight='balanced'",
+      "threshold": 0.5,
+      "validation": {
+        "accuracy": 0.86,
+        "recall": 0.8077,
+        "precision": 0.75,
+        "f1": 0.7778,
+        "roc_auc": 0.9317
+      },
+      "test": {
+        "accuracy": 0.895,
+        "precision": 0.802,
+        "recall": 0.8681,
+        "specificity": 0.9067,
+        "f1_score": 0.8338,
+        "roc_auc": 0.9546,
+        "true_negatives": 379,
+        "false_positives": 39,
+        "false_negatives": 24,
+        "true_positives": 158,
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0024,
+            "tpr": 0.2198
+          },
+          {
+            "fpr": 0.0048,
+            "tpr": 0.522
+          },
+          {
+            "fpr": 0.0096,
+            "tpr": 0.533
+          },
+          {
+            "fpr": 0.0144,
+            "tpr": 0.5495
+          },
+          {
+            "fpr": 0.0167,
+            "tpr": 0.6319
+          },
+          {
+            "fpr": 0.0215,
+            "tpr": 0.6374
+          },
+          {
+            "fpr": 0.0263,
+            "tpr": 0.6648
+          },
+          {
+            "fpr": 0.0335,
+            "tpr": 0.6923
+          },
+          {
+            "fpr": 0.0407,
+            "tpr": 0.6978
+          },
+          {
+            "fpr": 0.0431,
+            "tpr": 0.7527
+          },
+          {
+            "fpr": 0.0526,
+            "tpr": 0.7637
+          },
+          {
+            "fpr": 0.0622,
+            "tpr": 0.7692
+          },
+          {
+            "fpr": 0.0646,
+            "tpr": 0.8187
+          },
+          {
+            "fpr": 0.0766,
+            "tpr": 0.8242
+          },
+          {
+            "fpr": 0.0837,
+            "tpr": 0.8462
+          },
+          {
+            "fpr": 0.0861,
+            "tpr": 0.8681
+          },
+          {
+            "fpr": 0.1077,
+            "tpr": 0.8736
+          },
+          {
+            "fpr": 0.1124,
+            "tpr": 0.8956
+          },
+          {
+            "fpr": 0.134,
+            "tpr": 0.9066
+          },
+          {
+            "fpr": 0.1699,
+            "tpr": 0.9121
+          },
+          {
+            "fpr": 0.1794,
+            "tpr": 0.9231
+          },
+          {
+            "fpr": 0.2225,
+            "tpr": 0.9396
+          },
+          {
+            "fpr": 0.2656,
+            "tpr": 0.9451
+          },
+          {
+            "fpr": 0.2751,
+            "tpr": 0.956
+          },
+          {
+            "fpr": 0.3086,
+            "tpr": 0.9615
+          },
+          {
+            "fpr": 0.3206,
+            "tpr": 0.9725
+          },
+          {
+            "fpr": 0.3421,
+            "tpr": 0.9835
+          },
+          {
+            "fpr": 0.4402,
+            "tpr": 0.989
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ],
+        "classification_report": {
+          "No Heart Disease (0)": {
+            "precision": 0.9404466501240695,
+            "recall": 0.9066985645933014,
+            "f1-score": 0.9232643118148599,
+            "support": 418.0
+          },
+          "Heart Disease (1)": {
+            "precision": 0.8020304568527918,
+            "recall": 0.8681318681318682,
+            "f1-score": 0.8337730870712401,
+            "support": 182.0
+          },
+          "accuracy": 0.895,
+          "macro avg": {
+            "precision": 0.8712385534884306,
+            "recall": 0.8874152163625848,
+            "f1-score": 0.87851869944305,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.8984604048317819,
+            "recall": 0.895,
+            "f1-score": 0.8961186403092951,
+            "support": 600.0
+          }
+        },
+        "classification_report_text": "                      precision    recall  f1-score   support\n\nNo Heart Disease (0)     0.9404    0.9067    0.9233       418\n   Heart Disease (1)     0.8020    0.8681    0.8338       182\n\n            accuracy                         0.8950       600\n           macro avg     0.8712    0.8874    0.8785       600\n        weighted avg     0.8985    0.8950    0.8961       600\n"
+      }
+    },
+    "KNN": {
+      "hyperparameters": "n_neighbors=11, weights='distance', metric='minkowski'",
+      "threshold": 0.5,
+      "validation": {
+        "accuracy": 0.815,
+        "recall": 0.5275,
+        "precision": 0.7934,
+        "f1": 0.6337,
+        "roc_auc": 0.8934
+      },
+      "test": {
+        "accuracy": 0.8483,
+        "precision": 0.9027,
+        "recall": 0.5604,
+        "specificity": 0.9737,
+        "f1_score": 0.6915,
+        "roc_auc": 0.9252,
+        "true_negatives": 407,
+        "false_positives": 11,
+        "false_negatives": 80,
+        "true_positives": 102,
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0024,
+            "tpr": 0.3571
+          },
+          {
+            "fpr": 0.0096,
+            "tpr": 0.4066
+          },
+          {
+            "fpr": 0.0144,
+            "tpr": 0.478
+          },
+          {
+            "fpr": 0.0191,
+            "tpr": 0.4945
+          },
+          {
+            "fpr": 0.0239,
+            "tpr": 0.5549
+          },
+          {
+            "fpr": 0.0287,
+            "tpr": 0.5659
+          },
+          {
+            "fpr": 0.0431,
+            "tpr": 0.6209
+          },
+          {
+            "fpr": 0.0478,
+            "tpr": 0.6319
+          },
+          {
+            "fpr": 0.0526,
+            "tpr": 0.6429
+          },
+          {
+            "fpr": 0.0598,
+            "tpr": 0.6813
+          },
+          {
+            "fpr": 0.067,
+            "tpr": 0.7088
+          },
+          {
+            "fpr": 0.0837,
+            "tpr": 0.7473
+          },
+          {
+            "fpr": 0.0933,
+            "tpr": 0.7637
+          },
+          {
+            "fpr": 0.1077,
+            "tpr": 0.7857
+          },
+          {
+            "fpr": 0.1124,
+            "tpr": 0.7912
+          },
+          {
+            "fpr": 0.1292,
+            "tpr": 0.8022
+          },
+          {
+            "fpr": 0.1364,
+            "tpr": 0.8242
+          },
+          {
+            "fpr": 0.1579,
+            "tpr": 0.8407
+          },
+          {
+            "fpr": 0.1866,
+            "tpr": 0.8571
+          },
+          {
+            "fpr": 0.1914,
+            "tpr": 0.8791
+          },
+          {
+            "fpr": 0.2033,
+            "tpr": 0.9011
+          },
+          {
+            "fpr": 0.2129,
+            "tpr": 0.9121
+          },
+          {
+            "fpr": 0.2368,
+            "tpr": 0.9231
+          },
+          {
+            "fpr": 0.2656,
+            "tpr": 0.9341
+          },
+          {
+            "fpr": 0.3014,
+            "tpr": 0.9451
+          },
+          {
+            "fpr": 0.323,
+            "tpr": 0.956
+          },
+          {
+            "fpr": 0.3493,
+            "tpr": 0.967
+          },
+          {
+            "fpr": 0.5215,
+            "tpr": 0.978
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ],
+        "classification_report": {
+          "No Heart Disease (0)": {
+            "precision": 0.8357289527720739,
+            "recall": 0.9736842105263158,
+            "f1-score": 0.8994475138121547,
+            "support": 418.0
+          },
+          "Heart Disease (1)": {
+            "precision": 0.9026548672566371,
+            "recall": 0.5604395604395604,
+            "f1-score": 0.6915254237288135,
+            "support": 182.0
+          },
+          "accuracy": 0.8483333333333334,
+          "macro avg": {
+            "precision": 0.8691919100143555,
+            "recall": 0.7670618854829381,
+            "f1-score": 0.7954864687704841,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.856029813499058,
+            "recall": 0.8483333333333334,
+            "f1-score": 0.8363778131535413,
+            "support": 600.0
+          }
+        },
+        "classification_report_text": "                      precision    recall  f1-score   support\n\nNo Heart Disease (0)     0.8357    0.9737    0.8994       418\n   Heart Disease (1)     0.9027    0.5604    0.6915       182\n\n            accuracy                         0.8483       600\n           macro avg     0.8692    0.7671    0.7955       600\n        weighted avg     0.8560    0.8483    0.8364       600\n"
+      }
+    }
+  },
+  "feature_importance": {
+    "logistic_regression": [
+      {
+        "feature": "max_heart_rate_achieved",
+        "weight": -2.6568,
+        "abs_weight": 2.6568
+      },
+      {
+        "feature": "age",
+        "weight": -0.9513,
+        "abs_weight": 0.9513
+      },
+      {
+        "feature": "exercise_induced_angina_True",
+        "weight": 0.9017,
+        "abs_weight": 0.9017
+      },
+      {
+        "feature": "exercise_induced_angina_False",
+        "weight": -0.8858,
+        "abs_weight": 0.8858
+      },
+      {
+        "feature": "chest_pain_type_Typical Angina",
+        "weight": 0.8626,
+        "abs_weight": 0.8626
+      },
+      {
+        "feature": "st_depression",
+        "weight": 0.7535,
+        "abs_weight": 0.7535
+      },
+      {
+        "feature": "chest_pain_type_Asymptomatic",
+        "weight": -0.6957,
+        "abs_weight": 0.6957
+      },
+      {
+        "feature": "smoker_status_Current",
+        "weight": 0.6855,
+        "abs_weight": 0.6855
+      },
+      {
+        "feature": "smoker_status_Never",
+        "weight": -0.6489,
+        "abs_weight": 0.6489
+      },
+      {
+        "feature": "hba1c",
+        "weight": 0.5117,
+        "abs_weight": 0.5117
+      },
+      {
+        "feature": "hdl",
+        "weight": -0.4806,
+        "abs_weight": 0.4806
+      },
+      {
+        "feature": "sex_Male",
+        "weight": 0.3311,
+        "abs_weight": 0.3311
+      }
+    ],
+    "random_forest": [
+      {
+        "feature": "max_heart_rate_achieved",
+        "importance": 0.2499
+      },
+      {
+        "feature": "st_depression",
+        "importance": 0.0645
+      },
+      {
+        "feature": "exercise_induced_angina_True",
+        "importance": 0.0595
+      },
+      {
+        "feature": "exercise_induced_angina_False",
+        "importance": 0.0587
+      },
+      {
+        "feature": "age",
+        "importance": 0.048
+      },
+      {
+        "feature": "ldl",
+        "importance": 0.0442
+      },
+      {
+        "feature": "hdl",
+        "importance": 0.0402
+      },
+      {
+        "feature": "exercise_minutes_per_week",
+        "importance": 0.04
+      },
+      {
+        "feature": "bmi",
+        "importance": 0.038
+      },
+      {
+        "feature": "resting_bp_systolic",
+        "importance": 0.0322
+      },
+      {
+        "feature": "diet_quality_score",
+        "importance": 0.0278
+      },
+      {
+        "feature": "resting_heart_rate",
+        "importance": 0.0275
+      }
+    ]
+  },
+  "summary": {
+    "total_records": 4000,
+    "train_records": 2800,
+    "val_records": 600,
+    "test_records": 600,
+    "positive_cases": 1212,
+    "negative_cases": 2788
+  },
+  "winner_analysis": {
+    "best_model": "Logistic Regression",
+    "headline": "Why Logistic Regression Outperforms Random Forest & KNN on This Dataset",
+    "points": [
+      {
+        "title": "Smooth Linear Clinical Risk Relationship",
+        "detail": "In this 4,000-row clinical dataset, cardiovascular risk rises smoothly and additively with standardized biomarkers (max heart rate, age, ST depression, chest pain type, exercise-induced angina, smoking, HbA1c, HDL). Logistic Regression learns this smooth log-odds boundary directly, whereas Random Forest approximates diagonal boundaries using axis-aligned step splits."
+      },
+      {
+        "title": "Higher Sensitivity (Recall) & ROC-AUC on Test Data",
+        "detail": "On the 600-patient held-out test set, Logistic Regression achieves 96.1% ROC-AUC, 89.7% accuracy, and 89.0% recall on Heart Disease cases \u2014 outperforming Random Forest (95.5% ROC-AUC, 86.8% recall) and KNN (92.5% ROC-AUC, 56.0% recall)."
+      },
+      {
+        "title": "Why KNN Trails Behind",
+        "detail": "After One-Hot Encoding categorical features, the feature space has 25+ dimensions. Distance-based KNN suffers from the curse of dimensionality, causing lower recall (56.0%) compared to parametric and ensemble methods."
+      },
+      {
+        "title": "Well-Calibrated Probabilities & Interpretability",
+        "detail": "Logistic Regression produces naturally calibrated risk percentages (0%\u2013100%) and clear positive/negative feature weights (coefficients), which is ideal for medical screening."
+      }
+    ]
+  }
+}
